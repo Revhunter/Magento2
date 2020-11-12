@@ -1,0 +1,9 @@
+<?php
+/** @var Fwc\RevHunter\ViewModel\RevHunter $viewModel */
+/** @var Magento\Framework\View\Element\Template $block */
+$viewModel = $block->getRevHunterViewModel();
+?>
+<?php if ($viewModel->isModuleEnabled()) : ?>
+    <?php $dataObject = $this->getCurrentCategory() ?: $block->getProduct(); ?>
+    <img src="<?= $block->escapeUrl($viewModel->getRevHunterUrl($block->getRevType(), $dataObject)) ?>" width="0" height="0"/>
+<?php endif; ?>

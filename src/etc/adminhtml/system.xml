@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="rev_hunter_tab">
+            <label>RevHunter</label>
+        </tab>
+        <section id="rev_hunter" type="text" sortOrder="100" showInDefault="1" showInWebsite="0" showInStore="1">
+            <label>RevHunter Settings</label>
+            <tab>rev_hunter_tab</tab>
+            <resource>Fwc_RevHunter::config</resource>
+            <group id="configuration" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="1">
+                <label>Configuration</label>
+                <field id="status" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="1">
+                    <label>Module status</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="rev_hunter_id" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="1">
+                    <label>RevHunter ID</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

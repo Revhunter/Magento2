@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="before.body.end">
+            <block class="Magento\Catalog\Block\Product\View" name="rev_hunter_product" template="Fwc_RevHunter::rev_hunter.phtml">
+                <arguments>
+                    <argument name="rev_hunter_view_model" xsi:type="object">Fwc\RevHunter\ViewModel\RevHunter</argument>
+                    <argument name="rev_type" xsi:type="const">Fwc\RevHunter\ViewModel\RevHunter::TYPE_START</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
